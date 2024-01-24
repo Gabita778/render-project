@@ -63,7 +63,7 @@ const Nav = () => {
 
         <div className='items'>
           {isUserLoggedIn ? <LoggedUsersLinks /> : <GuestLinks />}
-          {isUserLoggedIn && <CartIcon className='cart-icon-background' />}
+          {isUserLoggedIn && <CartIcon  />}
         </div>
       </ul>
     </motion.nav>

@@ -11,7 +11,7 @@ const CartIcon = () => {
   return (
     <div className='cart'>
       <button type='button' className='btn-cart' onClick={handleToggleCart}>
-        <FaShoppingCart />
+        <FaShoppingCart className='cart-icon-background'/>
         <span className='items-amount'>
           {cartsState.items ? cartsState.items.length : 0}
         </span>
