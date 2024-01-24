@@ -40,6 +40,7 @@ export const logout = async (dispatchUsers) => {
 export const getMyData = async (dispatchUsers) => {
   try {
     const response = await axios.get(`${process.env.REACT_APP_API}/users/me`);
+    console.log(getMyData);
 
     if (response.data && response.data.isAuthenticated) {
       dispatchUsers({ type: "LOGIN_SUCCESS", payload: response.data });
