@@ -3,6 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { DataContext } from "../../store/context";
 import { addCartItem, getCartData } from "../../apiCalls/cartsApiCalls";
+import soldOut from "../../assets/sold-out.jpg"
 
 
 const RecordCard = ({ record, index }) => {
@@ -18,7 +19,7 @@ const RecordCard = ({ record, index }) => {
     }
   };
 
-  const defaultImgSrc = "../../assets/sold-out.jpg";
+  const defaultImgSrc = soldOut;
 
   return (
     <motion.div
@@ -32,7 +33,7 @@ const RecordCard = ({ record, index }) => {
       {img ? (
           <img className='record-img' src={img} alt='cartoon of record' />
         ) : (
-          <img className='record-img' src={defaultImgSrc} alt='Default record' />
+          <img className='record-img' src={defaultImgSrc} alt='sold out' />
         )}
         {/* <img className='record-img' src={img} alt='cartoon of record' /> */}
       </div>
