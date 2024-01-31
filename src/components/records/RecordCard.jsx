@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { DataContext } from "../../store/context";
 import { addCartItem, getCartData } from "../../apiCalls/cartsApiCalls";
 
+
 const RecordCard = ({ record, index }) => {
   const { title, img, price, artist, year } = record;
   const { usersState, dispatchCarts, cartsState } = useContext(DataContext);
@@ -16,6 +17,9 @@ const RecordCard = ({ record, index }) => {
       await getCartData(dispatchCarts, cartId);
     }
   };
+
+  const defaultImgSrc = "../../assets/sold-out.jpg";
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,7 +29,12 @@ const RecordCard = ({ record, index }) => {
       className='record'
     >
       <div>
-        <img className='record-img' src={img} alt='cartoon of record' />
+      {img ? (
+          <img className='record-img' src={img} alt='cartoon of record' />
+        ) : (
+          <img className='record-img' src={defaultImgSrc} alt='Default record' />
+        )}
+        {/* <img className='record-img' src={img} alt='cartoon of record' /> */}
       </div>
 
       <div className='record-info'>
