@@ -3,7 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { DataContext } from "../../store/context";
 import { addCartItem, getCartData } from "../../apiCalls/cartsApiCalls";
-import soldOut from "../../assets/sold-out.jpg"
+import soldOut from "../../assets/sold-out.jpeg";
 
 
 const RecordCard = ({ record, index }) => {
