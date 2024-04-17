@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MdDelete } from "react-icons/md";
 import { DataContext } from "../../store/context";
-import { deleteCartItem, getCartData } from "../../apiCalls/cartsApiCalls";
+import { deleteCartItem} from "../../apiCalls/cartsApiCalls";
 
 const CartItemsList = () => {
   const { cartsState, dispatchCarts, usersState } = useContext(DataContext);
